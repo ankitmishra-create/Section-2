@@ -2,8 +2,102 @@
 
 class Operators
 {
+    public static void ArithmeticOperators()
+    {
+        //Arithemetic Operators
+        int num1 = 10;
+        int num2 = 20;
+        int addedSum = num1 + num2;
+        int subtractedSum = num1 - num2;
+        int multipliedSum = num1 * num2;
+        int dividedSum = num1 / num2;
+        int modulusSum = num1 % num2;
+
+        //Assignment Operators  
+        int a = 10;
+        a += 5; // a = a + 5
+        a -= 3; // a = a - 3
+        a *= 2; // a = a * 2
+        a /= 4; // a = a / 4
+        a %= 3; // a = a % 3
+
+        //Increment and Decrement Operators
+        a++; // Increment a by 1
+        a--; // Decrement a by 1
+        ++a; // Post Increment (increments before use)
+        --a; // Post Decrement (decrements before use)
+
+        //Comparison Operators
+        if (num1 == num2) // Equal to
+        {
+            Console.WriteLine("num1 is equal to num2");
+        }
+        if (num1 != num2) // Not equal to
+        {
+            Console.WriteLine("num1 is not equal to num2");
+        }
+        if (num1 > num2) // Greater than
+        {
+            Console.WriteLine("num1 is greater than num2");
+        }
+        if (num1 < num2) // Less than
+        {
+            Console.WriteLine("num1 is less than num2");
+        }
+        if (num1 >= num2) // Greater than or equal to
+        {
+            Console.WriteLine("num1 is greater than or equal to num2");
+        }
+        if (num1 <= num2) // Less than or equal to
+        {
+            Console.WriteLine("num1 is less than or equal to num2");
+        }
+
+        //Logical Operators
+        bool condition1 = true;
+        bool condition2 = false;
+        if (condition1 && condition2) // Logical AND
+        {
+            Console.WriteLine("Both conditions are true");
+        }
+        if (condition1 || condition2) // Logical OR
+        {
+            Console.WriteLine("At least one condition is true");
+        }
+        if (!condition1) // Logical NOT
+        {
+            Console.WriteLine("Condition1 is false");
+        }
+
+        //Bitwise Operators
+        int bitwiseNum1 = 5; // 0101 in binary
+        int bitwiseNum2 = 3; // 0011 in binary
+        int bitwiseAnd = bitwiseNum1 & bitwiseNum2; // Bitwise AND
+        int bitwiseOr = bitwiseNum1 | bitwiseNum2; // Bitwise OR
+        int bitwiseXor = bitwiseNum1 ^ bitwiseNum2; // Bitwise XOR
+        int bitwiseNot = ~bitwiseNum1; // Bitwise NOT
+        int leftShift = bitwiseNum1 << 1; // Left shift
+        int rightShift = bitwiseNum1 >> 1; // Right shift
+
+        //Concatenation Operator
+        string str1 = "Hello";
+        string str2 = "World";
+        string concatanedString = str1 + str2; // Concatenation of strings
+
+        // Ternary Operator
+        Console.WriteLine((num1>num2)? "num1 is greater than num2" : "num2 is greater than num1");
+
+
+
+    }
+}
+
+class Executable
+{
     public static void Main()
     {
+        Operators.ArithmeticOperators();
+
 
     }
 }
