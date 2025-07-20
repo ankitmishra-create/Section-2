@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 class Operators
 {
@@ -92,12 +93,54 @@ class Operators
     }
 }
 
+class AreaOfCircle
+{
+    public static double numericalRadius;
+
+    public static void SetRadius(string value)
+    {
+        numericalRadius = double.Parse(value);
+    }
+
+    public static double GetRadius()
+    {
+        return 3.14 * (numericalRadius) * (numericalRadius);
+    }
+}
+
+class FeetToCentimeters
+{
+    public static double feetToCentimeters(double feet)
+    {
+        return feet * 30.48; // 1 foot = 30.48 centimeters
+    }
+}
+
+class NearestThousand
+{
+    public static double RoundToNearestThousand(double number)
+    {
+        return Math.Round(number / 1000) * 1000;
+    }
+}
+
+class SecondsToMinutes
+{
+    public static int SecondToMinute(int seconds)
+    {
+        return seconds / 60;
+    }
+}
+
 class Executable
 {
     public static void Main()
     {
         Operators.ArithmeticOperators();
-
+        AreaOfCircle.SetRadius("5");
+        FeetToCentimeters.feetToCentimeters(10);
+        NearestThousand.RoundToNearestThousand(123456.789);
+        SecondsToMinutes.SecondToMinute(120);
 
     }
 }
