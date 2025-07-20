@@ -132,6 +132,47 @@ class SecondsToMinutes
     }
 }
 
+class ConditionalControlStatement
+{
+    public static void Conditions()
+    {
+        int number = Convert.ToInt32(Console.ReadLine());
+        if (number > 10){ 
+            Console.WriteLine("Number is greater than 10");
+        }
+        else if (number == 10)
+        {
+            Console.WriteLine("Number is equal to 10");  
+        }
+        else
+        {
+            Console.WriteLine("Number is less than 10");
+        }
+    }
+
+    public static void Heights(double data)
+    {
+        data = data * 2.54;
+        if (data < 150)
+        {
+            Console.WriteLine("Dwarf");
+        }
+        else if(data >= 150 && data <= 165)
+        {
+            Console.WriteLine("Average Height");
+        }
+        else if(data >= 166 && data <= 195)
+        {
+            Console.WriteLine("Tall");
+        }
+        else
+        {
+            Console.WriteLine("Abnormal Height");
+        }
+    }
+    
+}
+
 class Executable
 {
     public static void Main()
@@ -141,6 +182,7 @@ class Executable
         FeetToCentimeters.feetToCentimeters(10);
         NearestThousand.RoundToNearestThousand(123456.789);
         SecondsToMinutes.SecondToMinute(120);
+        ConditionalControlStatement.Heights(75);
 
     }
 }
