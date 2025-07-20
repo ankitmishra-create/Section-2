@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 class Operators
 {
@@ -210,6 +209,65 @@ class Switches
     }
 }
 
+class Loops
+{
+    public static void WhileLoop()
+    {
+        int i = 0;
+        while (i < 5)
+        {
+            Console.WriteLine(i);
+            i++;
+        }
+    }
+
+    public static void DoWhileLoop()
+    {
+        int i = 0;
+        do
+        {
+            Console.WriteLine(i);
+            i++;
+        } while (i < 5);
+    }
+
+    public static void ForLoop()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+
+    public static void ForEachLoop()
+    {
+        string[] names = { "Alice", "Bob", "Charlie" };
+        foreach (string name in names)
+        {
+            Console.WriteLine(name);
+        }
+    }
+
+    public static void NestedLoop()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                if (j == 2)
+                {
+                    break;
+                }
+                if (j == 3)
+                {
+                    continue;
+                }
+                Console.WriteLine($"i: {i}, j: {j}");
+            }
+        }
+    }
+}
+
 class Executable
 {
     public static void Main()
@@ -221,6 +279,7 @@ class Executable
         SecondsToMinutes.SecondToMinute(120);
         ConditionalControlStatement.Heights(75);
         Switches.SwitchExample();
+        Loops.DoWhileLoop();
 
     }
 }
